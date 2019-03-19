@@ -1,5 +1,5 @@
 <?php
-class Controller extends DBConnect{
+class Controller extends DBconnect{
 	use Categories;
 	use Products;
 	use Orders;
@@ -37,6 +37,11 @@ class Controller extends DBConnect{
 	public static function addCategoryData($viewName){
 	   require_once("views/$viewName.php");
 	   static::addCategoryList();
+	}
+
+	public static function usersProducts($viewName){
+	   require_once("views/$viewName.php");
+	   static::selectUserProduct();
 	}
 //Customers
 	/*public static function customer($viewName){

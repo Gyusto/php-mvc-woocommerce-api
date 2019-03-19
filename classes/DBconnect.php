@@ -7,11 +7,11 @@ class DBconnect{
  
 
 $woocommerce = new Client(
-    'https://www.sanaabiz.co.tz', 
+    '', 
   // Your consumer key
-    'ck_5e134a4434919b7914bcfa1d5a7ffe6a05302562', 
+    '', 
   // Your consumer secret
-    'cs_19bb148f720904cf2074182c40e2a4e9641f61a5', 
+    '', 
     [
   // Enable the WP REST API integration
         'wp_api' => true, 
@@ -21,7 +21,12 @@ $woocommerce = new Client(
 );
 return $woocommerce;
 }
-
+protected static function conMysql(){
+    $pdo = new PDO('mysql:host=107.180.56.153;dbname=i5137467_wp2;charset=utf8', 'i5137467_wp2','V.DyYKTKTapzcLCgB7d58');
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    return $pdo;
+}
 }
 
 

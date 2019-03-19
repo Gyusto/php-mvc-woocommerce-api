@@ -80,4 +80,17 @@ self::con()->post('products',  $data);
 
   
 }
+public static function useProducts(){
+  if(isset($_GET['user_id'])){
+    $stmt = self::conMysql()->prepare("select * from wp_posts inner join wp_postmeta on wp_posts.ID=wp_postmeta.post_id inner join wp_users on wp_users.ID=wp_posts.post_author where wp_users.ID=:userid");
+    $stmt->bindValue(":userid",$_GET['user_id']);
+    $stmt->execute();
+    $data = $stmt->fetchAll();
+     return $data;
+  }
+   
+  }
+
+
+
 }

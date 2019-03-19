@@ -5,7 +5,7 @@ public static function orderData(){
   if(isset($_GET['order_id'])){
     $Id=$_GET['order_id'];
  // $Id=758;
-    $data = self::con()->orders->get('',array( 'filter[customer_id' => $Id));
+    $data = self::con()->get('orders',array( 'filter[customer_id' => $Id));
     $data_arr['data']=$data;
     return $data_arr;
 }

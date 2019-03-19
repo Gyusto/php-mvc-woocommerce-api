@@ -41,6 +41,10 @@ class ProductLists extends Controller{
 		echo json_encode(self::orderTest());
 
 	}
+	public static function selectUserProduct(){
+		echo json_encode(self::useProducts());
+
+	}
 
 
 

@@ -1,6 +1,6 @@
 <?php
 Route::get('',function(){
-	Home::CreateView('home');
+	Home::CreateView('Home');
 });
 
 Route::get('productLists',function(){
@@ -11,6 +11,9 @@ Route::get('getproduct',function(){
 });
 Route::get('addproduct',function(){
     ProductLists::postproducts('productList');
+});
+Route::get('userproducts',function(){
+    ProductLists::usersProducts('productList');
 });
 Route::get('deleteproduct',function(){
     ProductLists::deleteproductData('productList');
