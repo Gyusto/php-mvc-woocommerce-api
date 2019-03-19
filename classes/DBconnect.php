@@ -22,7 +22,7 @@ $woocommerce = new Client(
 return $woocommerce;
 }
 protected static function conMysql(){
-    $pdo = new PDO('mysql:host=107.180.56.153;dbname=i5137467_wp2;charset=utf8', 'i5137467_wp2','V.DyYKTKTapzcLCgB7d58');
+    $pdo = new PDO('mysql:host=;dbname=i5137467_wp2;charset=utf8', '','V.DyYKTKTapzcLCgB7d58');
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $pdo;
